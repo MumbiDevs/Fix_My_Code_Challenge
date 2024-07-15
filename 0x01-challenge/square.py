@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module that creates a square class"""
 
-
 class Square:
     def __init__(self, side):
         self.side = side
@@ -13,7 +12,7 @@ class Square:
     def perimeter(self):
         """Calculates the perimeter of the square."""
         return self.side * 4
-
+    
     def __str__(self):
         return f"Square with side length: {self.side}"
 
