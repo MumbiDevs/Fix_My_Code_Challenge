@@ -1,23 +1,29 @@
 #!/usr/bin/python3
 """Module that creates a square class"""
 
+
 class Square:
-    def __init__(self, side):
-        self.side = side
+    """Creates Square class"""
+
+    def __init__(self, width=0, height=0):
+        """init method that initialises attributes"""
+        self.width = width
+        self.height = height
 
     def area(self):
-        """Calculates the area of the square."""
-        return self.side ** 2
+        """Calculate the area of the square"""
+        return self.width * self.height
 
     def perimeter(self):
-        """Calculates the perimeter of the square."""
-        return self.side * 4
-    
+        """Calculate the perimeter of the square"""
+        return 2 * (self.width + self.height)
+
     def __str__(self):
-        return f"Square with side length: {self.side}"
+        return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
-    s = Square(side=12)
+    s = Square(width=12, height=9)
     print(s)
-    print(s.area())
-    print(s.perimeter())
+    print("Area:", s.area())
+    print("Perimeter:", s.perimeter())
